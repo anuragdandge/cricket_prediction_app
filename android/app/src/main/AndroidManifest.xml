@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.cricket_prediction_app">
    <application
-        android:label="Cricket Prediction 2023"
+        android:label="Cricket Prediction Tips"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

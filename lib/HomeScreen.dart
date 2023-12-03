@@ -1,4 +1,5 @@
 import 'package:cricket_prediction_app/login.dart';
+import 'package:cricket_prediction_app/privacyPolicy.dart';
 import 'package:cricket_prediction_app/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -105,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Icon(
-                                        Icons.whatsapp,
+                                        Icons.message,
                                         size: 80,
                                         color: Colors.green[500],
                                       ),
@@ -175,84 +176,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           MaterialStateProperty.all(
                                               Colors.white)),
                                   onPressed: () {
-                                    showModalBottomSheet<void>(
-                                      context: context,
-                                      builder: (BuildContext context) {
-                                        return Container(
-                                          height: 430,
-                                          color: Colors.white,
-                                          child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.start,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: <Widget>[
-                                              Center(
-                                                child: Image.asset(
-                                                  'assets/logo.png',
-                                                  height: 150,
-                                                  width: 150,
-                                                ),
-                                              ),
-                                              const Center(
-                                                child: Text(
-                                                  "Privacy & Policy ",
-                                                  style: TextStyle(
-                                                      fontSize: 30,
-                                                      color: Colors.amber,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                ),
-                                              ),
-                                              const Padding(
-                                                padding: EdgeInsets.only(
-                                                    left: 20,
-                                                    right: 20,
-                                                    top: 10,
-                                                    bottom: 10),
-                                                child: Text(
-                                                  " ♦️ We do not use to Store any kind of user Information such as Phone Number, Mail, Name, Banking Details & Address. ",
-                                                  textAlign: TextAlign.center,
-                                                ),
-                                              ),
-                                              const Padding(
-                                                padding: EdgeInsets.only(
-                                                    left: 20,
-                                                    right: 20,
-                                                    top: 10,
-                                                    bottom: 10),
-                                                child: Text(
-                                                  " ♦️ We Are not providing any kind of paid services to users . ",
-                                                  textAlign: TextAlign.center,
-                                                ),
-                                              ),
-                                              const Padding(
-                                                padding: EdgeInsets.only(
-                                                    left: 20,
-                                                    right: 20,
-                                                    top: 10,
-                                                    bottom: 10),
-                                                child: Text(
-                                                  " ♦️ User have to make sure read this policy carefully before using this application. ",
-                                                  textAlign: TextAlign.center,
-                                                ),
-                                              ),
-                                              const Padding(
-                                                padding: EdgeInsets.only(
-                                                    left: 20,
-                                                    right: 20,
-                                                    top: 10,
-                                                    bottom: 10),
-                                                child: Text(
-                                                  " ♦️ We are only information provider ",
-                                                  textAlign: TextAlign.center,
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        );
-                                      },
-                                    );
+                                    Get.to(() => PrivacyPolicy());
                                   },
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -300,7 +224,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             children: <Widget>[
                                               Center(
                                                 child: Image.asset(
-                                                  'assets/logo.png',
+                                                  'assets/logo_crick.jpg',
                                                   height: 150,
                                                   width: 150,
                                                 ),

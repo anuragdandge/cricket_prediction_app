@@ -51,7 +51,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  intl: ^0.17.0  
+  intl: ^0.18.1  
 flutter_icons:
   android: true
   image_path: "assets/logo.png"  

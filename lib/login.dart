@@ -4,8 +4,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:get/get.dart';
-import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:intl/intl.dart';
 
 CollectionReference Customers =
     FirebaseFirestore.instance.collection('Customers');
@@ -44,7 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 50,
                   ),
                   const Text(
-                    'Welcome to Cricket Prediction 2023 ',
+                    'Welcome to Cricket Prediction Tips',
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.w500,
@@ -127,7 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
         'phone': phone.text,
         'time&date': FieldValue.serverTimestamp()
       });
-      
+
       setPreferance();
       setState(() {
         Get.to(() => const HomeScreen());
@@ -141,5 +141,4 @@ class _LoginScreenState extends State<LoginScreen> {
     sharedPreferences.setString('name', name.text);
     sharedPreferences.setString('phone', phone.text);
   }
-
 }
